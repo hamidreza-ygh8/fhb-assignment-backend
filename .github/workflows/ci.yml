@@ -27,6 +27,12 @@ jobs:
     - name: Run Test
       run: npm run test
 
+    - name: Archive Test Result artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-result
+        path: test-results/results.xml
+
 
   build:
     runs-on: ubuntu-latest
