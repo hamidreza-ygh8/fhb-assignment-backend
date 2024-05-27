@@ -8,4 +8,5 @@ export default [
   {languageOptions: { globals: globals.browser }},
   pluginJs.configs.recommended,
   mochaPlugin.configs.flat.recommended,
+  {ignores: ["node_modules/*"]},
 ];

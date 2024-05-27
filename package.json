@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "mocha --reporter mocha-junit-reporter --reporter-options mochaFile=./test-results/results.xml --exit",
-    "lint": "npx eslint . --ignore-pattern node_modules/"
+    "lint": "npx eslint ."
   },
   "author": "",
   "license": "ISC",
