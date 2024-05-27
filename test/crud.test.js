@@ -2,24 +2,24 @@ const request = require('supertest');
 const expect = require('chai').expect;
 const app = require('../index');
 
-describe('GET /', () => {
-  it('should return "Hello World!"', async () => {
+describe('GET /', function() {
+  it('should return "Hello World!"', async function() {
     const res = await request(app).get('/');
     expect(res.statusCode).to.equal(200);
     expect(res.text).to.equal('<h1>Hello World!</h1>');
   });
 });
 
-describe('GET /api/notes', () => {
-    it('should return all existing notes', async () => {
+describe('GET /api/notes', function() {
+    it('should return all existing notes', async function() {
         const res = await request(app).get('/api/notes');
         expect(res.statusCode).to.equal(200);
         expect(res.body).to.have.lengthOf(3);
     });
 });
 
-describe('POST /api/notes', () => {
-  it('should return a new note', async () => {
+describe('POST /api/notes', function() {
+  it('should return a new note', async function() {
     const res = await request(app).post('/api/notes').send(
         { 
             content: 'We had a great experience with TDD'
@@ -30,8 +30,8 @@ describe('POST /api/notes', () => {
   });
 });
 
-describe('Get /api/notes/:id', () => {
-    it('should return a specific note', async () => {
+describe('Get /api/notes/:id', function() {
+    it('should return a specific note', async function() {
       const res = await request(app).get('/api/notes/2');
       expect(res.statusCode).to.equal(200);
       expect(res.body).to.have.property('content', 'Browser can execute only Javascript');
@@ -39,8 +39,8 @@ describe('Get /api/notes/:id', () => {
     });
 });
 
-describe('DELETE /api/notes/:id', () => {
-    it('should delete a specific note', async () => {
+describe('DELETE /api/notes/:id', function() {
+    it('should delete a specific note', async function() {
       const res = await request(app).delete('/api/notes/2');
       expect(res.statusCode).to.equal(204);
       const getRes = await request(app).get('/api/notes');
