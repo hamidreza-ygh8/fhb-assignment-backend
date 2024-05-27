@@ -22,13 +22,19 @@ jobs:
         node-version: '20.13.1'
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Run ESLint
       run: npm run lint
 
     - name: Run Test
       run: npm run test
+
+    - name: Run Test With Coverage
+      run: npm run test-with-coverage
+
+    - name: Generate lcov Reporter
+      run: npm run test-with-lcov-reporter
 
     - name: Archive Test Result artifacts
       uses: actions/upload-artifact@v3
