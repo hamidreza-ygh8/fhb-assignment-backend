@@ -43,7 +43,7 @@ jobs:
         path: test-results/results.xml
 
     - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@v1.7
+      uses: sonarsource/sonarcloud-github-action@2.2
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
