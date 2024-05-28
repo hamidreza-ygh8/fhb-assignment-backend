@@ -178,8 +178,11 @@ This project uses Dependabot for automated dependency updates. Dependabot checks
 ## Static Code Analysis
 
 SonarCloud is used for static code analysis. The `test` job includes a step to run a SonarCloud scan to analyze the code for potential bugs, code smells, and security vulnerabilities.
+![image](https://github.com/hamidreza-ygh8/fhb-assignment-backend/assets/143938782/d9c6afdc-d3ec-47fe-99d5-dc4352738456)
 
 ## Docker Integration
 
 The `build` job includes steps to build a Docker image and push it to the GitHub Container Registry. This allows for easy deployment of the application in a containerized environment.
+
+
 
