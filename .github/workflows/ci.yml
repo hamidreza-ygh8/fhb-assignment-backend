@@ -90,6 +90,6 @@ jobs:
         platforms: linux/x86_64
         file: ./Dockerfile
         tags: 
-          ghcr.io/${{github.repository}}/notes-backend:1.0.0
+          ghcr.io/${{github.repository}}/notes-backend:1.${{ github.run_number }}
         push: true
 
